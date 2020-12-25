@@ -1,0 +1,126 @@
+html {
+    font-family: "Poppins";
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    /* background-image: url(../images/img-01.jpg); */
+    background-color: #ffffff;
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 700px;
+    height: 700px;
+    /* background-color: rgba(255,255,255,0.5); */
+    background-color: #DD2121;
+    /* box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0,0.7); */
+    border-radius: 50%;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    left: -300px;
+
+    width: 0; 
+    height: 0; 
+    border-top: 350px solid transparent;
+    border-bottom: 350px solid transparent; 
+    border-left:350px solid #DD2121; 
+    
+    z-index: -1;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    right: -300px;
+
+    width: 0; 
+    height: 0; 
+    border-top: 350px solid transparent;
+    border-bottom: 350px solid transparent; 
+    border-right: 350px solid #DD2121; 
+
+    z-index: -1;
+}
+
+.box__title {
+    font-size: 3rem;
+    text-align: center;
+}
+.box__title span {
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0,0.7);
+}
+
+.box__placar {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box__placar__item {
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0,0.7);
+
+    margin: 0 20px;
+    width: 100px;
+
+    padding: 5px 0;
+    border-radius: 2px;
+    background-color: #DD2121;
+    
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.box__contador {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box__contador__item {
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0,1);
+
+    margin: 0 20px;
+
+    border-radius: 40%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255,255,255,1);
+    color: #DD2121;
+    
+    font-size: 3rem;
+    text-align: center;
+    line-height: 100px;
+}
